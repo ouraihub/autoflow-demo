@@ -2,3 +2,11 @@
 
 AutoFlow 的验收项目：聊天里提需求，GitHub Actions 里完成开发。
 Acceptance project for AutoFlow: request features in chat, develop them in GitHub Actions.
+
+## 告别函数
+
+```ts
+import { farewell } from './src/farewell.ts'
+
+farewell('小明') // '再见，小明！'
+```
