@@ -42,3 +42,8 @@
 
 - `name` 是否应像 `greet` 一样调用 `trim()`，以及空白姓名是否应回退为默认词？在未获答复前按需求原文直接保留并插入姓名；测试上述空串与前后空白行为。
 - 是否要求统一入口导出 `farewell`？当前仓库没有统一入口，暂按从 `src/farewell.ts` 直接导入处理。
+
+## 任务
+
+- [ ] 新增 `src/farewell.ts` 和同目录 `src/farewell.test.ts`，在同一提交中交付函数与测试。验收：`node --test src/farewell.test.ts` 通过，普通姓名、中文姓名、空串和空白保留行为符合方案；若需求方调整边界语义，同步调整实现与测试。
+- [ ] 在 `README.md` 增加直接导入 `farewell` 的调用示例并完成整体验收。验收：执行 `node --input-type=module -e 'import { farewell } from "./src/farewell.ts"; const result = farewell("小明"); if (result !== "再见，小明！") throw new Error(result); console.log(result)'` 输出 `再见，小明！`，且 `npm test` 全部通过；示例的导入路径和输出与实际一致。
