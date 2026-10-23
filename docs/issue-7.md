@@ -45,9 +45,10 @@
 
 ## 任务
 
-- [ ] 新增 `src/farewell.ts` 和同目录 `src/farewell.test.ts`，在同一提交中交付函数与测试。验收：`node --test src/farewell.test.ts` 通过，普通姓名、中文姓名、空串和空白保留行为符合方案；若需求方调整边界语义，同步调整实现与测试。
+- [x] 新增 `src/farewell.ts` 和同目录 `src/farewell.test.ts`，在同一提交中交付函数与测试。验收：`node --test src/farewell.test.ts` 通过，普通姓名、中文姓名、空串和空白保留行为符合方案；若需求方调整边界语义，同步调整实现与测试。
 - [ ] 在 `README.md` 增加直接导入 `farewell` 的调用示例并完成整体验收。验收：执行 `node --input-type=module -e 'import { farewell } from "./src/farewell.ts"; const result = farewell("小明"); if (result !== "再见，小明！") throw new Error(result); console.log(result)'` 输出 `再见，小明！`，且 `npm test` 全部通过；示例的导入路径和输出与实际一致。
 
 ## 进度记录
 
 - 2026-10-23：完成需求、现状、方案、影响与风险、待确认事项和分步任务；运行 `npm test`，现有 1 项测试通过。下一步：按任务新增 `src/farewell.ts` 及同目录测试，补充 README 示例并完成模块与全套测试验收。需求方可确认是否修剪或回退空姓名、是否需要统一导出入口；未回复时沿用本文假设，不阻塞后续实现。
+- 2026-10-23：完成任务一：新增 `src/farewell.ts` 及同目录测试，覆盖普通姓名、中文姓名、空串和空白保留；`node --test src/farewell.test.ts` 通过。下一步：补充 README 调用示例并完成真实模块调用和 `npm test` 整体验收。
