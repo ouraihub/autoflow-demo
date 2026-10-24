@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   autoflow:
-    uses: ouraihub/AutoFlow/.github/workflows/review.yml@ef80af630a59518d33187e59f74652b7b1a5bf69 # v0.2.0
+    uses: ouraihub/AutoFlow/.github/workflows/review.yml@e6f0e59d18f1619ba278be9012456af20604c85f # v0.2.1
     with:
       model: ${{ vars.AI_MODEL }}
     secrets:
